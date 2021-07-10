@@ -1,6 +1,8 @@
 name: orders-test
 on:
-  pull_request
+  pull_request:
+    paths:
+      - 'orders/**'
 
 jobs:
   build:
@@ -8,4 +10,3 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: cd auth && npm install && npm run test:ci
-      
