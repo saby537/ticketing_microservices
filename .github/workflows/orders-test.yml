@@ -1,4 +1,4 @@
-name: tests
+name: orders-test
 on:
   pull_request
 
@@ -6,6 +6,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v2
+      - uses: actions/checkout@v2
       - run: cd auth && npm install && npm run test:ci
       
