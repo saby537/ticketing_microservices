@@ -5,6 +5,7 @@ import { OrderCancelledListerner } from './events/listener/order-cancelled-liste
 import { natsWrapper } from './nats-wrapper';
 
 const start = async () => {
+	console.log('Ticket Service starting up...');
 	if (!process.env.JWT_KEY) {
 		throw new Error('JWT Key Missing!!!');
 	}
