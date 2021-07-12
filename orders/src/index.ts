@@ -6,6 +6,7 @@ import { TicketUpdatedListener } from './events/listener/ticket-updated-listener
 import { PaymentCreatedListener } from './events/listener/payment-created-listener';
 
 const start = async () => {
+	console.log('Orders Service starting up ...');
 	if (!process.env.JWT_KEY) {
 		throw new Error('JWT Key Missing!!!');
 	}
